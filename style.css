@@ -82,8 +82,17 @@ a {
 }
 
 .container {
-    width: min(1200px, 92%);
+    width: min(1120px, 92%);
     margin: auto;
+}
+
+.features .container,
+.pricing .container {
+    max-width: 1040px;
+}
+
+.faq .container {
+    max-width: 900px;
 }
 
 .navbar {
@@ -318,4 +327,485 @@ nav {
 
 .hero-rating span {
     color: #666;
+}
+
+/* ==========================
+      FEATURES
+========================== */
+
+/*=========================
+        FEATURES
+=========================*/
+
+.features {
+    padding: 70px 0;
+    background: #fff;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-badge {
+    display: inline-block;
+    color: #04684A;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.section-header h2 {
+    font-size: 36px;
+    line-height: 1.15;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.section-header p {
+    max-width: 620px;
+    margin: auto;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.7;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.feature-card {
+    background: #fff;
+    border: 1px solid #ECECEC;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    border-color: #04684A;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .08);
+}
+
+.feature-image {
+    height: 170px;
+    background: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
+.feature-image img {
+    width: 100%;
+    max-width: 240px;
+}
+
+.feature-card h3 {
+    padding: 18px 22px 8px;
+    font-size: 22px;
+}
+
+.feature-card p {
+    padding: 0 22px 22px;
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+}
+
+@media(max-width:900px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*=========================
+        PRICING
+=========================*/
+
+/*=========================
+        PRICING
+=========================*/
+
+.pricing {
+    padding: 70px 0;
+    background: #fff;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 45px;
+}
+
+.pricing-card {
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid #ECECEC;
+    transition: .3s;
+}
+
+.pricing-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .08);
+}
+
+.featured {
+    border: 2px solid #04684A;
+}
+
+.plan-tag {
+    font-size: 13px;
+    padding: 6px 14px;
+}
+
+.popular {
+    top: -12px;
+    right: 20px;
+    font-size: 11px;
+    padding: 7px 14px;
+}
+
+.pricing-card h3 {
+    font-size: 24px;
+    margin: 18px 0;
+}
+
+.price {
+    font-size: 44px;
+    font-weight: 800;
+}
+
+.price-note {
+    margin: 8px 0 24px;
+    font-size: 14px;
+}
+
+.pricing-card ul {
+    /* margin-bottom: 24px; */
+    list-style: none;
+    margin: 0 0 28px;
+    padding: 0;
+}
+
+.pricing-card li {
+    /* padding: 8px 0;
+    font-size: 15px; */
+    list-style: none;
+    padding: 10px 0;
+    color: #555;
+    border-bottom: 1px solid #f4f4f4;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pricing-card li:last-child {
+    border-bottom: none;
+}
+
+.pricing-footer {
+    margin-top: 35px;
+    font-size: 14px;
+}
+
+@media(max-width:900px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*=========================
+          FAQ
+=========================*/
+
+.faq {
+
+    padding: 80px 0;
+
+    background: #fafafa;
+
+}
+
+.faq-list {
+
+    max-width: 900px;
+
+    margin: 60px auto 0;
+
+}
+
+.faq-item {
+
+    background: #fff;
+
+    border: 1px solid #e8e8e8;
+
+    border-radius: 18px;
+
+    margin-bottom: 18px;
+
+    overflow: hidden;
+
+    transition: .3s;
+
+}
+
+.faq-item:hover {
+
+    border-color: #04684A;
+
+}
+
+.faq-item summary {
+
+    list-style: none;
+
+    cursor: pointer;
+
+    padding: 26px 30px;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.faq-item summary::-webkit-details-marker {
+
+    display: none;
+
+}
+
+.faq-item summary::after {
+
+    content: "+";
+
+    font-size: 28px;
+
+    color: #04684A;
+
+    transition: .25s;
+
+}
+
+.faq-item[open] summary::after {
+
+    content: "−";
+
+}
+
+.faq-item p {
+
+    padding: 0 30px 28px;
+
+    color: #666;
+
+    line-height: 1.8;
+
+    font-size: 17px;
+
+}
+
+.faq-cta {
+    text-align: center;
+    padding: 60px 24px;
+    background: #fafafa;
+}
+
+.faq-cta h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.faq-cta p {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 32px;
+    line-height: 1.6;
+}
+
+/*=========================
+        FOOTER
+=========================*/
+
+.footer {
+
+    margin-top: 80px;
+
+    border-top: 1px solid #ececec;
+
+    background: #fff;
+
+}
+
+.footer-container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 80px;
+
+    padding: 60px 24px;
+
+}
+
+.footer-brand {
+
+    max-width: 420px;
+
+}
+
+.footer-brand img {
+
+    width: 170px;
+
+    margin-bottom: 22px;
+
+}
+
+.footer-brand p {
+
+    color: #666;
+
+    line-height: 1.8;
+
+}
+
+.footer-links {
+
+    display: flex;
+
+    gap: 70px;
+
+}
+
+.footer-column {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+}
+
+.footer-column h4 {
+
+    font-size: 18px;
+
+    margin-bottom: 10px;
+
+    color: #111;
+
+}
+
+.footer-column a {
+
+    color: #666;
+
+    text-decoration: none;
+
+    transition: .25s;
+
+}
+
+.footer-column a:hover {
+
+    color: #04684A;
+
+}
+
+.footer-bottom {
+
+    border-top: 1px solid #ececec;
+
+    padding: 24px 0;
+
+}
+
+.footer-bottom-content {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.footer-bottom span {
+
+    color: #777;
+
+}
+
+.footer-bottom-links {
+
+    display: flex;
+
+    gap: 24px;
+
+}
+
+.footer-bottom-links a {
+
+    color: #777;
+
+    text-decoration: none;
+
+    transition: .25s;
+
+}
+
+.footer-bottom-links a:hover {
+
+    color: #04684A;
+
+}
+
+/* Responsive */
+
+@media(max-width:900px) {
+
+    .footer-container {
+
+        flex-direction: column;
+
+        gap: 50px;
+
+    }
+
+    .footer-links {
+
+        flex-wrap: wrap;
+
+        gap: 40px;
+
+    }
+
+    .footer-bottom-content {
+
+        flex-direction: column;
+
+        gap: 16px;
+
+        text-align: center;
+
+    }
+
 }
